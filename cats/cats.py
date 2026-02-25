@@ -270,8 +270,8 @@ def minimum_mewtations(typed, source, limit):
         # END
     else:
         add = minimum_mewtations(source[0] + typed[0:], source, limit - 1) + 1
-        remove = minimum_mewtations(source[0] + typed[1:], source, limit - 1) + 1
-        substitute = minimum_mewtations(typed[1:], source, limit - 1) + 1
+        substitute = minimum_mewtations(source[0] + typed[1:], source, limit - 1) + 1
+        remove= minimum_mewtations(typed[1:], source, limit - 1) + 1
         # BEGIN
         "*** YOUR CODE HERE ***"
         return min(add,remove,substitute)
